@@ -6,10 +6,10 @@
  * @version 0.1-dev
  */
 
-namespace odaialali\yii2toastr;
+namespace gbksoft\yii2toastr;
 
-use odaialali\yii2toastr\ToastrAsset;
-use odaialali\yii2toastr\ToastrCustomAsset;
+use gbksoft\yii2toastr\ToastrAsset;
+use gbksoft\yii2toastr\ToastrCustomAsset;
 use yii\helpers\Json;
 
 /**
@@ -22,17 +22,17 @@ class Toastr extends \yii\base\Widget{
     const TYPE_INFO = 'info';
     const TYPE_SUCCESS = 'success';
     const TYPE_WARNING = 'warning';
-    
+
     public $customStyle = true;
     public $toastType;
-    
+
     public $title;
     public $message;
-    
+
     public $options = [];
-    
+
     protected $jsonOptions = [];
-    
+
     public function init() {
         parent::init();
         if(empty($this->toastType)){
@@ -47,12 +47,12 @@ class Toastr extends \yii\base\Widget{
             ToastrAsset::register($this->getView());
         }
     }
-    
+
     public function run() {
         parent::run();
         $this->registerNotification();
     }
-    
+
     protected function initJsOptions(){
         //if(isset)
         $value_arr = array();
@@ -75,7 +75,7 @@ class Toastr extends \yii\base\Widget{
         $this->jsonOptions = empty($this->options) ? '[]' : Json::encode($this->options);
         $this->jsonOptions = str_replace($replace_keys, $value_arr, $this->jsonOptions);
     }
-    
+
     protected function registerNotification(){
         $view = $this->getView();
         if ($this->options !== false) {

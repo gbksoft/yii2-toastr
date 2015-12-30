@@ -6,9 +6,9 @@
  * @version 0.1-dev
  */
 
-namespace odaialali\yii2toastr;
+namespace gbksoft\yii2toastr;
 
-use odaialali\yii2toastr\Toastr;
+use gbksoft\yii2toastr\Toastr;
 /**
  * Description of ToastrFlash
  *

@@ -4,7 +4,7 @@
  * @package yii2-toastr
  * @version 0.1-dev
  */
-namespace odaialali\yii2toastr;
+namespace gbksoft\yii2toastr;
 
 use yii\web\AssetBundle;
 /**
@@ -17,7 +17,7 @@ class ToastrCustomAsset extends AssetBundle{
         'toastr-style-reset.css',
     ];
     public $depends = [
-        'odaialali\yii2toastr\ToastrAsset',
+        'gbksoft\yii2toastr\ToastrAsset',
     ];
     
     public function init() {

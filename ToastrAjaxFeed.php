@@ -6,9 +6,9 @@
  * @version 0.1-dev
  */
 
-namespace odaialali\yii2toastr;
+namespace gbksoft\yii2toastr;
 
-use odaialali\yii2toastr\ToastrAjaxFeedAsset;
+use gbksoft\yii2toastr\ToastrAjaxFeedAsset;
 use yii\helpers\Json;
 /**
  * Description of ToastrAjaxFeed
