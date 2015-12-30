@@ -25,9 +25,9 @@ class ToastrFlash extends \yii\base\Widget {
         'info'    => 'info',
         'warning' => 'warning'
     ];
-    
+
     public $options = [];
-    
+
     public function init()
     {
         parent::init();
@@ -41,7 +41,7 @@ class ToastrFlash extends \yii\base\Widget {
                 foreach ($data as $message) {
                     echo Toastr::widget([
                         'toastType' => $this->alertTypes[$type],
-                        'message' => $message,
+                        'message' => addslashes($message),
                         'options' => $this->options,
                     ]);
                 }
